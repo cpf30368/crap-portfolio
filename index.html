@@ -1,10 +1,125 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>crap portfolio</title>
-  </head>
-  <body>
 
-  </body>
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        <title>So entsteht des Aktienkurses</title>        <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/js/aupizfd2-create.js"></script>        <link href="/css/layout.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/displaylogic.css" media="screen" rel="stylesheet" type="text/css" />    </head>
+    <body>
+        <div id="pageWrapper">
+            <h1>So entsteht der Aktienkurs</h1>
+            <div id="columnWrapper">
+
+<div class="colleft">
+    <h2>Order eingeben</h2>
+    <form id="createform" enctype="application/x-www-form-urlencoded" action="/index/ordereingeben" method="post">
+<div class="entry"><span class="label">Ordertyp</span>
+<div class="field">
+<label><input type="radio" name="ordertyp" id="ordertyp-K" value="K" checked="checked" />Kauf</label> <label><input type="radio" name="ordertyp" id="ordertyp-V" value="V" />Verkauf</label></div></div>
+<div class="entry"><span class="label">Unlimitierte Order</span>
+<div class="field">
+<input type="checkbox" name="market_order" id="market_order" value="M" /></div></div>
+<div class="entry"><span class="label">Limit</span>
+<div class="field">
+<input type="text" name="limit" id="limit" value="" maxlength="11" />
+<p class="hint">z.B. 12 oder 18,9 oder 38,59</p></div></div>
+<div class="entry"><span class="label">St&uuml;ck</span>
+<div class="field">
+<input type="text" name="stueck" id="stueck" value="" maxlength="11" />
+<p class="hint">eine ganze Zahl, größer als Null</p></div></div>
+<div class="do">
+
+<input type="submit" name="submit" id="submit" value="Eingeben" class="submit" />
+
+<input type="reset" name="reset" id="reset" value="Zurücksetzen" class="reset" /></div></form>    <div id="orders">
+
+<table id="kauf">
+    <caption><strong>Kauforder</strong></caption>
+    <colgroup>
+        <col class="o-reihenfolge" />
+        <col class="o-preis" />
+        <col class="o-stueck" />
+        <col class="o-action" />
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col">Nr.</th>
+            <th scope="col">Preis</th>
+            <th scope="col">St&uuml;ck</th>
+            <th scope="col">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+                <td colspan="3">leer.</td>
+                <td>&nbsp;</td>
+            </tr>
+            </tbody>
+</table>
+
+
+<table id="verkauf">
+    <caption><strong>Verkauforder</strong></caption>
+    <colgroup>
+        <col class="o-reihenfolge" />
+        <col class="o-preis" />
+        <col class="o-stueck" />
+        <col class="o-action" />
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col">Nr.</th>
+            <th scope="col">Preis</th>
+            <th scope="col">St&uuml;ck</th>
+            <th scope="col">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+                <td colspan="3">leer.</td>
+                <td>&nbsp;</td>
+            </tr>
+            </tbody>
+</table>
+
+    </div>
+</div>
+<div class="colright">
+    <table id="kurse">
+    <caption><strong>Kurse</strong></caption>
+    <colgroup>
+        <col id="kursreihenfolge" />
+        <col id="kurspreis" />
+        <col id="kursstueck" />
+        <col id="anzahlkauf" />
+        <col id="anzahlverkauf" />
+        <col id="tendenz" />
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Nr.</th>
+            <th>Preis</th>
+            <th>St&uuml;ck</th>
+            <th>Anzahl<br />Kauforder</th>
+            <th>Anzahl<br />Verkauforder</th>
+            <th>Tendenz</th>
+        </tr>
+    </thead>
+            <tr>
+            <td colspan="6">Orderbuch ist leer.</td>
+        </tr>
+    </table>
+</div>
+</div>
+
+<div id="footer">
+    <hr class="divline"/>
+    <!-- TODO: class footerlinks -->
+    <ul class="footerlinks">
+        <li><a href=/index/about>Impressum</a></li>
+        <li><a href=/index/dataprivacy>Datenschutz</a></li>
+    </ul>
+
+</div>
+        </div>
+    </body>
 </html>
